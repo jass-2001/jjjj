@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    }
+
+    .header_text {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 40px;
+        font-weight: bold;
+        color: rgb(255red, gree255n, bl255ue);
+        text-align: center;
+    }
+    
+    .header_text2 {
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(255red, gree255n, bl255ue);
+        text-align: center;
+    }
+
+    .gif_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 300px;
+        margin-left: -220px;
+    }
