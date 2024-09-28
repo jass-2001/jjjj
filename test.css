@@ -1,48 +1,57 @@
-body {
+html, body {
     margin: 0;
     height: 100%;
-    }
+    background-color: #fee5df;
+}
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center; /* Center text and content inside the container */
+}
 
-    .container {
-        display: flex;
-        flex-direction: column; /* Align items in a column */
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-    .header_text {
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 40px;
-        font-weight: bold;
-        color: rgb(255red, gree255n, bl255ue);
-        text-align: center;
-    }
-    
-    .header_text2 {
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: 20px;
-        font-weight: bold;
-        color: rgb(255red, gree255n, bl255ue);
-        text-align: center;
-        margin-top: 10px;
-    }
+.header_text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 0, 0); /* Correct the color */
+}
 
-    .gif_container {
-        text-align: center;
-        margin-top: 20px;
-    }
-    
-    .btn {
-        background-color: white;
-        color: darkred;
-        padding: 25px 32px;
-        text-align: center;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 12px;
-        border: none;
-        transition: background-color 0.3 ease;
-    }
+.header_text2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 0, 0); /* Correct the color */
+    margin-top: 10px; /* Add spacing between texts */
+}
+
+.gif_container {
+    margin-top: 20px; /* Space between the second text and the GIF */
+}
+
+.gif_container img {
+    max-width: 100%; /* Make the GIF responsive */
+    height: auto;
+}
+
+.buttons {
+    margin-top: 20px; /* Space between the GIF and the button */
+}
+
+.btn {
+    background-color: white;
+    color: darkred;
+    padding: 25px 32px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ffcccc; /* Change background on hover */
+}
