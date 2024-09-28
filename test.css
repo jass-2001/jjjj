@@ -10,35 +10,35 @@ html, body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    text-align: center; /* Center text and content inside the container */
+    text-align: center; 
 }
 
 .header_text {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 40px;
     font-weight: bold;
-    color: rgb(255, 0, 0); /* Correct the color */
+    color: rgb(255, 0, 0); 
 }
 
 .header_text2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     font-weight: bold;
-    color: rgb(255, 0, 0); /* Correct the color */
-    margin-top: 10px; /* Add spacing between texts */
+    color: rgb(255, 0, 0); 
+    margin-top: 10px; 
 }
 
 .gif_container {
-    margin-top: 20px; /* Space between the second text and the GIF */
+    margin-top: 20px; 
 }
 
 .gif_container img {
-    max-width: 100%; /* Make the GIF responsive */
+    max-width: 100%; 
     height: auto;
 }
 
 .buttons {
-    margin-top: 20px; /* Space between the GIF and the button */
+    margin-top: 20px; 
 }
 
 .btn {
@@ -53,5 +53,5 @@ html, body {
 }
 
 .btn:hover {
-    background-color: #ffcccc; /* Change background on hover */
+    background-color: #ffcccc;
 }
