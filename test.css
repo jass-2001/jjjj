@@ -25,12 +25,10 @@ body {
         font-weight: bold;
         color: rgb(255red, gree255n, bl255ue);
         text-align: center;
-        margin-top: -10px;
+        margin-top: 10px;
     }
 
     .gif_container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
         margin-top: 20px;
     }
