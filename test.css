@@ -1,57 +1,62 @@
-html, body {
-    margin: 0;
-    height: 100%;
-    background-color: #fee5df;
-}
+from fpdf import FPDF
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center; 
-}
+# Create the table data for the timetable
+table_data_middle_east = [
+    ["Sunday", "Instagram", "Reel: 5 Quick Tips for Designing Small Spaces", "7:30 PM"],
+    ["Sunday", "Facebook", "Album Post: Recent project story", "12:00 PM"],
+    ["Sunday", "LinkedIn", "Article Post: 2025 Interior Design Trends", "9:00 AM"],
+    ["Sunday", "Behance", "Project Upload: Completed project with captions", "Evening"],
+    ["Monday", "Instagram", "Poll in Stories: Which style do you prefer?", "8:00 PM"],
+    ["Monday", "Facebook", "Testimonial Post: Client story with before-and-after", "1:00 PM"],
+    ["Monday", "LinkedIn", "Case Study Post: Project challenges and solutions", "9:30 AM"],
+    ["Tuesday", "Instagram", "Carousel Post: 3 Ways to Use Earthy Tones", "7:00 AM"],
+    ["Tuesday", "Facebook", "Inspirational Post: Quote with cozy living room image", "7:30 PM"],
+    ["Tuesday", "LinkedIn", "Trend Report: Sustainability in Interior Design", "12:00 PM"],
+    ["Tuesday", "Behance", "Mood Boards: Creative ideas for an upcoming project", "Evening"],
+    ["Wednesday", "Instagram", "Reels: Time-lapse of a project setup", "8:00 PM"],
+    ["Wednesday", "Facebook", "Educational Post: Top 5 Materials for Kitchens", "1:00 PM"],
+    ["Wednesday", "LinkedIn", "Team Spotlight: Introduce a team member", "9:00 AM"],
+    ["Thursday", "Instagram", "Poll/Q&A Stories: Biggest home decorating challenge?", "8:00 PM"],
+    ["Thursday", "Facebook", "Fun Fact Post: Benefits of green walls", "12:30 PM"],
+    ["Thursday", "LinkedIn", "Thought Leadership: Design trends and challenges", "9:00 AM"],
+    ["Friday", "Instagram", "Reels: Interior transformation with voiceover", "7:30 PM"],
+    ["Friday", "Facebook", "Engagement Post: Dream kitchen design video", "2:00 PM"],
+    ["Friday", "LinkedIn", "Industry Insight: Sustainable material innovation", "10:00 AM"],
+    ["Friday", "Behance", "Portfolio Update: Renders of ongoing projects", "Evening"],
+    ["Saturday", "Instagram", "Inspirational Post: Relaxing weekend design", "8:00 PM"],
+    ["Saturday", "Facebook", "Weekend Tip Post: 3 Ways to Refresh Your Living Room", "12:00 PM"],
+    ["Saturday", "LinkedIn", "Event Post: Announce upcoming workshop/expo", "9:00 AM"],
+    ["Saturday", "Behance", "Detailed Project Story: Sketches, materials, photos", "Evening"],
+]
 
-.header_text {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-    color: rgb(0, 0, 0); 
-}
+# Create the PDF
+pdf = FPDF(orientation="L", unit="mm", format="A4")
+pdf.add_page()
+pdf.set_auto_page_break(auto=True, margin=15)
 
-.header_text2 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: rgb(0, 0, 0); 
-    margin-top: 10px; 
-}
+# Title
+pdf.set_font("Arial", size=14, style="B")
+pdf.cell(0, 10, "Weekly Social Media Timetable (Middle East)", ln=True, align="C")
+pdf.ln(5)
 
-.gif_container {
-    margin-top: 20px; 
-}
+# Table Header
+pdf.set_font("Arial", size=10, style="B")
+headers = ["Day", "Platform", "Content Type", "Time"]
+col_widths = [30, 40, 160, 30]
 
-.gif_container img {
-    max-width: 100%; 
-    height: auto;
-}
+for i, header in enumerate(headers):
+    pdf.cell(col_widths[i], 10, header, border=1, align="C")
+pdf.ln()
 
-.buttons {
-    margin-top: 20px; 
-}
+# Table Rows
+pdf.set_font("Arial", size=9)
+for row in table_data_middle_east:
+    for i, cell in enumerate(row):
+        pdf.cell(col_widths[i], 8, cell, border=1, align="L")
+    pdf.ln()
 
-.btn {
-    background-color: white;
-    color: darkred;
-    padding: 25px 32px;
-    font-size: 16px;
-    border-radius: 12px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+# Save the PDF
+file_path = "/mnt/data/Weekly_Social_Media_Timetable_Middle_East.pdf"
+pdf.output(file_path)
 
-.btn:hover {
-    background-color: #ffcccc;
-}
+file_path
